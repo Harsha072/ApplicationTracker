@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "466046406875",
+    "project_id": "application-tracker-ee84d",
+    "storage_bucket": "application-tracker-ee84d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466046406875:android:205658bba6eac87e693cfe",
+        "android_client_info": {
+          "package_name": "ie.wit.applicationtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466046406875-kprk7h8ro6nru8onasr7orn3vaij4k3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfSQyu2cRJDuOvtKoH37_sMEOhfEywdPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466046406875-kprk7h8ro6nru8onasr7orn3vaij4k3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
