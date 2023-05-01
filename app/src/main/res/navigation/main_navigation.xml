@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/addApplicationFragment">
+
+    <fragment
+        android:id="@+id/addApplicationFragment"
+        android:name="ie.wit.applicationtracker.ui.addApplication.addApplicationFragment"
+        android:label="@string/action_add_application"
+        tools:layout="@layout/fragment_add_application" >
+        <action
+            android:id="@+id/action_addApplicationFragment_to_applicationListFragment"
+            app:destination="@id/applicationListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/applicationListFragment"
+        android:name="ie.wit.applicationtracker.ui.applicationlist.applicationListFragment"
+        android:label="@string/action_application_list"
+        tools:layout="@layout/fragment_application_list" >
+        <action
+            android:id="@+id/action_applicationListFragment_to_addApplicationFragment"
+            app:destination="@id/addApplicationFragment"
+            app:popUpTo="@id/main_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_reportFragment_to_donationDetailFragment"
+            app:destination="@id/applicationDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ie.wit.applicationtracker.ui.about.aboutFragment"
+        android:label="@string/action_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/applicationDetailFragment"
+        android:name="ie.wit.applicationtracker.ui.details.detailsFragment"
+        android:label="Application Detail"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_applicationDetailFragment_to_applicationListFragment"
+            app:destination="@id/applicationListFragment" />
+        <argument
+            android:name="donationid"
+            app:argType="string" />
+    </fragment>
+</navigation>

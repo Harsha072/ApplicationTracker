@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "466046406875",
+    "firebase_url": "https://application-tracker-ee84d-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "application-tracker-ee84d",
     "storage_bucket": "application-tracker-ee84d.appspot.com"
   },
@@ -14,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "466046406875-kprk7h8ro6nru8onasr7orn3vaij4k3j.apps.googleusercontent.com",
+          "client_id": "466046406875-t7mj3akd01o9j1q93irpr2jfsjddjf6n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

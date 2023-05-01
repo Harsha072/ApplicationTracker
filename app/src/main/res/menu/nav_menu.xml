@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/addApplicationFragment"
+            android:icon="@drawable/add_application"
+            android:title="@string/action_add_application" />
+        <item
+            android:id="@+id/applicationListFragment"
+            android:icon="@drawable/add_application"
+            android:title="@string/action_application_list" />
+        <item
+            android:id="@+id/aboutFragment"
+            android:icon="@drawable/aboutus"
+            android:title="@string/action_about" />
+    </group>
+    <item android:title="@string/group_settings">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/profile"
+                android:title="@string/action_profile" />
+
+        </menu>
+    </item>
+    <item android:title="Access Control">
+        <menu>
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@android:drawable/ic_menu_revert"
+                android:title="@string/sign_out" />
+        </menu>
+    </item>
+
+</menu>

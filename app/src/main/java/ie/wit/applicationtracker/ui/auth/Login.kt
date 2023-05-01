@@ -14,7 +14,7 @@ import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import ie.wit.applicationtracker.R
 import ie.wit.applicationtracker.databinding.LoginBinding
-import ie.wit.applicationtracker.ui.Home.Home
+import ie.wit.applicationtracker.ui.home.Home
 import timber.log.Timber
 
 class Login : AppCompatActivity() {
