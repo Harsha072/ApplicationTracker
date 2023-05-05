@@ -19,7 +19,7 @@
     <item android:title="@string/group_settings">
         <menu>
             <item
-                android:id="@+id/nav_profile"
+                android:id="@+id/profileFragment"
                 android:icon="@drawable/profile"
                 android:title="@string/action_profile" />
 

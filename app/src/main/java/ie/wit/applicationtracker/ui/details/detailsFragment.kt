@@ -23,7 +23,7 @@ class detailsFragment : Fragment() {
     private var _fragBinding: FragmentDetailsBinding? = null
     private val fragBinding get() = _fragBinding!!
     private val loggedInViewModel : LoggedInViewModel by activityViewModels()
-    private val reportViewModel : ApplicationListViewModel by activityViewModels()
+    private val applicationListViewModel : ApplicationListViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?
@@ -44,7 +44,7 @@ class detailsFragment : Fragment() {
             findNavController().navigateUp()
         }
         fragBinding.deleteButton.setOnClickListener {
-            reportViewModel.delete(loggedInViewModel.liveFirebaseUser.value?.email!!,
+            applicationListViewModel.delete(loggedInViewModel.liveFirebaseUser.value?.email!!,
                 detailViewModel.observableApplication.value?.uid!!)
             findNavController().navigateUp()
         }
@@ -56,8 +56,14 @@ class detailsFragment : Fragment() {
     private fun render() {
         Timber.i("render:::::")
 
-        Timber.i("donation detail"+" "+detailViewModel)
+        Timber.i("donation detail"+" "+detailViewModel.observableApplication.value)
+
         fragBinding.applicationvm = detailViewModel
+        when (detailViewModel.observableApplication.value?.status) {
+            "Pending" -> fragBinding.statusPending.isChecked = true
+            "Accepted" -> fragBinding.statusAccepted.isChecked = true
+            "Rejected" -> fragBinding.statusRejected.isChecked = true
+        }
         Timber.i("Retrofit fragBinding.donationvm == {${fragBinding.applicationvm}}")
     }
 
