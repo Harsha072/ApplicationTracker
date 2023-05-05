@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import ie.wit.applicationtracker.R
 import ie.wit.applicationtracker.databinding.FragmentAddApplicationBinding
@@ -139,7 +140,8 @@ class addApplicationFragment : Fragment() {
                     applicationEndDateEditText.text = null
                     statusRadioGroup.clearCheck()
                 }
-
+                val navController = findNavController()
+                navController.popBackStack()
 
 
             }

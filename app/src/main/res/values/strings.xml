@@ -13,7 +13,7 @@
     <string name="defaultMethod">N/A</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="action_add_application">Add College Application</string>
-    <string name="action_application_list">College list</string>
+    <string name="action_application_list">Application list</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
 
@@ -40,7 +40,7 @@
     <string name="message">Message :</string>
     <string name="upvotes">UpVotes :</string>
 
-    <string name="messageLoading">Please Wait while the Donations are Loading...</string>
+    <string name="messageLoading">Please Wait...</string>
 
     <!-- START Firebase Resources-->
 

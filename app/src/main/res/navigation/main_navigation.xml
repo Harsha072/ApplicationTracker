@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/applicationListFragment"
-        android:name="ie.wit.applicationtracker.ui.applicationlist.applicationListFragment"
+        android:name="ie.wit.applicationtracker.ui.applicationlist.ApplicationListFragment"
         android:label="@string/action_application_list"
         tools:layout="@layout/fragment_application_list" >
         <action
@@ -29,7 +29,7 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
-            android:id="@+id/action_reportFragment_to_donationDetailFragment"
+            android:id="@+id/action_applicationListFragment_to_applicationDetailFragment"
             app:destination="@id/applicationDetailFragment" />
     </fragment>
     <fragment
@@ -46,7 +46,7 @@
             android:id="@+id/action_applicationDetailFragment_to_applicationListFragment"
             app:destination="@id/applicationListFragment" />
         <argument
-            android:name="donationid"
+            android:name="applicationid"
             app:argType="string" />
     </fragment>
 </navigation>

@@ -7,7 +7,9 @@
 
     <color name="colorAccent">#034F8F</color>
     <color name="ic_launcher_homer_background">#FFFFFF</color>
-
+    <color name="coloryellow">#D5C905</color>
+    <color name="colorgreen">#0EBA07</color>
+    <color name="colorred">#E40000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="grey_100">#2196F3</color>
     <color name="grey_300">#E0E0E0</color>

@@ -16,16 +16,16 @@ import ie.wit.applicationtracker.R
 import java.io.IOException
 import java.util.*
 
-//fun createLoader(activity: FragmentActivity) : AlertDialog {
-//    val loaderBuilder = AlertDialog.Builder(activity)
-//        .setCancelable(true) // 'false' if you want user to wait
-//        .setView(R.layout.loading)
-//    var loader = loaderBuilder.create()
-//    loader.setTitle(R.string.app_name)
-//    loader.setIcon(R.mipmap.ic_launcher_round)
-//
-//    return loader
-//}
+fun createLoader(activity: FragmentActivity) : AlertDialog {
+    val loaderBuilder = AlertDialog.Builder(activity)
+        .setCancelable(true) // 'false' if you want user to wait
+        .setView(R.layout.loading)
+    var loader = loaderBuilder.create()
+    loader.setTitle(R.string.app_name)
+    loader.setIcon(R.mipmap.ic_launcher_round)
+
+    return loader
+}
 
 fun showLoader(loader: AlertDialog, message: String) {
     if (!loader.isShowing) {

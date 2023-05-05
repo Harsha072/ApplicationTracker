@@ -20,10 +20,10 @@ object FirebaseDBManager : ApplicationStore {
 
     override fun findAll(userid: String, applicationList: MutableLiveData<List<ApplicationModel>>) {
 
-        database.child("user-applications").child(userid)
+        database.child("user-application").child(userid)
             .addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(error: DatabaseError) {
-                    Timber.i("Firebase Donation error : ${error.message}")
+                    Timber.i("Firebase application error : ${error.message}")
                 }
 
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -33,7 +33,7 @@ object FirebaseDBManager : ApplicationStore {
                         val application = it.getValue(ApplicationModel::class.java)
                         localList.add(application!!)
                     }
-                    database.child("user-applications").child(userid)
+                    database.child("user-application").child(userid)
                         .removeEventListener(this)
 
                     applicationList.value = localList
@@ -89,7 +89,7 @@ object FirebaseDBManager : ApplicationStore {
 
         val childUpdate : MutableMap<String, Any?> = HashMap()
         childUpdate["application/$applicationid"] = applicationValues
-        childUpdate["user-donations/$userid/$applicationid"] = applicationValues
+        childUpdate["user-application/$userid/$applicationid"] = applicationValues
 
         database.updateChildren(childUpdate)
     }
