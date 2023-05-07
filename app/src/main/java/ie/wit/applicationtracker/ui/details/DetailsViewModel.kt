@@ -31,14 +31,14 @@ class DetailsViewModel : ViewModel() {
             Timber.i("Detail getApplication() Error : $e.message")
         }
     }
-    @BindingAdapter("app:checkedButton")
-    fun setCheckedButton(view: RadioGroup, status: ApplicationStatus?) {
-        when (status) {
-            ApplicationStatus.ACCEPTED -> view.check(R.id.statusAccepted)
-            ApplicationStatus.REJECTED -> view.check(R.id.statusRejected)
-            else -> view.check(R.id.statusPending)
-        }
-    }
+//    @BindingAdapter("app:checkedButton")
+//    fun setCheckedButton(view: RadioGroup, status: ApplicationStatus?) {
+//        when (status) {
+//            ApplicationStatus.ACCEPTED -> view.check(R.id.statusAccepted)
+//            ApplicationStatus.REJECTED -> view.check(R.id.statusRejected)
+//            else -> view.check(R.id.statusPending)
+//        }
+//    }
     fun updateDonation(userid: String, id: String, application: ApplicationModel) {
         try {
             FirebaseDBManager.update(userid, id, application)

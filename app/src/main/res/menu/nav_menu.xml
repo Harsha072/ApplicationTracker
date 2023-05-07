@@ -15,6 +15,10 @@
             android:id="@+id/aboutFragment"
             android:icon="@drawable/aboutus"
             android:title="@string/action_about" />
+        <item
+            android:id="@+id/collegeListFragment"
+            android:icon="@drawable/aboutus"
+            android:title="Collge list" />
     </group>
     <item android:title="@string/group_settings">
         <menu>

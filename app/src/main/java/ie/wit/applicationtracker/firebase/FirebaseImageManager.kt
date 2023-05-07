@@ -18,11 +18,11 @@ import ie.wit.applicationtracker.utils.customTransformation
 
 object FirebaseImageManager {
     var storage = FirebaseStorage.getInstance().reference
-    var imageUri = MutableLiveData<Uri>()
+    var imageUri = MutableLiveData<Uri>().apply { value = null }
 
     fun checkStorageForExistingProfilePic(userid: String) {
         val imageRef = storage.child("photos").child("${userid}.jpg")
-        val defaultImageRef = storage.child("homer.jpg")
+        val defaultImageRef = storage.child("img.png")
 
         imageRef.metadata.addOnSuccessListener { //File Exists
             imageRef.downloadUrl.addOnCompleteListener { task ->

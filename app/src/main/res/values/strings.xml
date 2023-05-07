@@ -30,8 +30,8 @@
     <string name="action_about">About Us</string>
     <string name="aboutus_title">Homer for President !!</string>
     <string name="aboutus_message">Hi, I\'m Homer\n\nPlease vote for me.\n\n Please Please Please Please!!</string>
-
-    <string name="donationsNotFound">No Applications added Yet…\n!</string>
+    <string name="collegeNotFound">No Colleges added Yet…\n!</string>
+    <string name="applicationNotFound">No Applications added Yet…\n!</string>
     <string name="donationError">Error : Couldn\'t Make a Donation…</string>
     <string name="donationDetails">Donation Details</string>
 

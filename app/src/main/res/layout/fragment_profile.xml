@@ -1,4 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="profilevm"
+            type="ie.wit.applicationtracker.ui.profile.ProfileViewModel" />
+    </data>
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,7 +25,7 @@
                 android:id="@+id/profile_picture"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/icon"
+                android:src="@drawable/img"
                 android:scaleType="centerCrop"/>
 
             <LinearLayout
@@ -61,37 +69,55 @@
                 android:id="@+id/edit_text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"/>
+                android:hint="Name"
+                android:text="@={profilevm.observableUser.name}"/>
 
             <EditText
                 android:id="@+id/edit_text_dob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Date of Birth"/>
+                android:hint="Date of Birth"
+                android:inputType="none"
+                android:text="@={profilevm.observableUser.dob}"/>
 
             <EditText
                 android:id="@+id/edit_text_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Address"/>
+                android:hint="Address"
+                android:text="@={profilevm.observableUser.address}"/>
 
-            <EditText
-                android:id="@+id/edit_text_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"/>
 
             <EditText
                 android:id="@+id/edit_text_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone Number"/>
+                android:hint="Phone Number"
+                android:text="@={profilevm.observableUser.phone}"/>
 
             <EditText
                 android:id="@+id/edit_text_citizenship"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Citizenship Status"/>
+                android:hint="Citizenship Status"
+                android:text="@={profilevm.observableUser.citizenship}"/>
+            <EditText
+                android:id="@+id/edit_gpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GPA"
+                android:text="@={profilevm.observableUser.gpa}"/>
+            <EditText
+                android:id="@+id/edit_activites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Extracurricular Activites"
+                android:text="@={profilevm.observableUser.activities}"/>
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save" />
         </LinearLayout>
 
     </LinearLayout>
@@ -99,3 +125,4 @@
 
 
 </RelativeLayout>
+</layout>
