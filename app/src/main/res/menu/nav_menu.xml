@@ -12,13 +12,14 @@
             android:icon="@drawable/add_application"
             android:title="@string/action_application_list" />
         <item
+            android:id="@+id/collegeListFragment"
+            android:icon="@drawable/college"
+            android:title="Collge list" />
+        <item
             android:id="@+id/aboutFragment"
             android:icon="@drawable/aboutus"
             android:title="@string/action_about" />
-        <item
-            android:id="@+id/collegeListFragment"
-            android:icon="@drawable/aboutus"
-            android:title="Collge list" />
+
     </group>
     <item android:title="@string/group_settings">
         <menu>

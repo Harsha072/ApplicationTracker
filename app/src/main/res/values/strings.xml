@@ -34,7 +34,9 @@
     <string name="applicationNotFound">No Applications added Yet…\n!</string>
     <string name="donationError">Error : Couldn\'t Make a Donation…</string>
     <string name="donationDetails">Donation Details</string>
-
+<string name="description">The College Application Tracker is a useful tool for high school students and their families as they navigate the college application process. With this app, users can easily keep track of the colleges they are interested in, including important details like application deadlines and requirements. The app also allows users to create a checklist for each college application, ensuring that nothing is forgotten or overlooked during the application process. With its intuitive interface and helpful features, the College Application Tracker is a must-have app for anyone applying to college.</string>
+    <string name="contact">Contact</string>
+    <string name="information">Information</string>
     <string name="amt">Amount :</string>
     <string name="payment">Payment :</string>
     <string name="message">Message :</string>

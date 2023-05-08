@@ -149,7 +149,7 @@ object FirebaseDBManager : ApplicationStore,UserStore,CheckListStore {
 
 
     override fun update(userid: String, applicationid: String, application: ApplicationModel) {
-
+Timber.i("application valuses"+application)
         val applicationValues = application.toMap()
 
         val childUpdate : MutableMap<String, Any?> = HashMap()

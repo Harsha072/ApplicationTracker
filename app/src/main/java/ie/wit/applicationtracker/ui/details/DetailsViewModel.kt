@@ -39,7 +39,7 @@ class DetailsViewModel : ViewModel() {
 //            else -> view.check(R.id.statusPending)
 //        }
 //    }
-    fun updateDonation(userid: String, id: String, application: ApplicationModel) {
+    fun updateApplication(userid: String, id: String, application: ApplicationModel) {
         try {
             FirebaseDBManager.update(userid, id, application)
             Timber.i("Detail update() Success : $application")
