@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--    <data>-->
-    <!--        <variable-->
-    <!--            name="listvm"-->
-    <!--            type="ie.wit.applicationtracker.ui.college.ProfileViewModel" />-->
-    <!--    </data>-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+            <variable
+                name="listvm"
+                type="ie.wit.applicationtracker.ui.checklist.ChecklistViewModel" />
+        </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,14 +40,16 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_layout" />
 
         <Button
             android:id="@+id/save_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_gravity="bottom"/>
+            android:layout_height="63dp"
+            android:layout_gravity="bottom"
+            android:text="Save" />
 
     </LinearLayout>
 

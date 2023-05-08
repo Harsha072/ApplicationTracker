@@ -5,15 +5,12 @@
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
-import ie.wit.applicationtracker.models.ApplicationModel
-import ie.wit.applicationtracker.models.ApplicationStore
-import ie.wit.applicationtracker.models.UserModel
-import ie.wit.applicationtracker.models.UserStore
+import ie.wit.applicationtracker.models.*
 
 import timber.log.Timber
 
 
-object FirebaseDBManager : ApplicationStore,UserStore {
+object FirebaseDBManager : ApplicationStore,UserStore,CheckListStore {
     var database: DatabaseReference = FirebaseDatabase.getInstance().reference
 
     override fun findAll(applicationList: MutableLiveData<List<ApplicationModel>>) {
@@ -111,6 +108,25 @@ object FirebaseDBManager : ApplicationStore,UserStore {
 
         database.updateChildren(childAdd)
     }
+    override fun createCheckList(firebaseUser: MutableLiveData<FirebaseUser>, list:ItemList, application: String) {
+        Timber.i("calling creat:::::::")
+        val uid = firebaseUser.value!!.uid
+        val key = database.child("user-checklist").push().key
+        if (key == null) {
+            Timber.i("Firebase Error : Key Empty")
+            return
+        }
+
+        val listValues = list.toMap()
+        Timber.i("calling "+listValues)
+        Timber.i("calling creat:::::::"+application)
+        val childAdd = HashMap<String, Any>()
+
+        childAdd["/user-checklist/$application"] = listValues
+
+        database.updateChildren(childAdd)
+    }
+
 
     override fun deleteUser(userid: String) {
         TODO("Not yet implemented")
@@ -141,6 +157,33 @@ object FirebaseDBManager : ApplicationStore,UserStore {
         childUpdate["user-application/$userid/$applicationid"] = applicationValues
 
         database.updateChildren(childUpdate)
+    }
+
+    override fun findAllCheckList(userList: MutableLiveData<List<ItemList>>) {
+        TODO("Not yet implemented")
+    }
+
+    override fun findAllCheckList(userid: String, userList: MutableLiveData<List<ItemList>>) {
+        TODO("Not yet implemented")
+    }
+
+    override fun findByCheckListId(application: String, checklist: MutableLiveData<ItemList>) {
+        database.child("user-checklist").child(application)
+           .get().addOnSuccessListener {
+                checklist.value = it.getValue(ItemList::class.java)
+                Timber.i("firebase Got item value ${it.value}")
+            }.addOnFailureListener{
+                Timber.e("firebase Error item getting data $it")
+            }
+    }
+
+
+    override fun deleteCheckList(userid: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun updateCheckList(userid: String, checklistid: String, list: ItemList) {
+        TODO("Not yet implemented")
     }
 
 }

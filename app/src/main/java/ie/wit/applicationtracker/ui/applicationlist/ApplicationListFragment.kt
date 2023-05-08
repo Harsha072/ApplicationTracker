@@ -131,7 +131,7 @@ class ApplicationListFragment : Fragment(), ApplicationClickListener {
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
-//
+
     private fun render(applicationList: ArrayList<ApplicationModel>) {
         fragListBinding.recyclerView.adapter = ApplicationAdapter(applicationList,this)
         if (applicationList.isEmpty()) {

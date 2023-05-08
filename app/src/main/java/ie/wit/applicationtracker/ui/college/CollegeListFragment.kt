@@ -13,6 +13,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,7 @@ import ie.wit.applicationtracker.ui.auth.LoggedInViewModel
 import ie.wit.applicationtracker.ui.college.adapters.CollegeAdapter
 
 import ie.wit.applicationtracker.ui.college.adapters.CollegeClickListener
+import ie.wit.applicationtracker.ui.details.detailsFragmentArgs
 import ie.wit.applicationtracker.utils.*
 import timber.log.Timber
 
@@ -126,7 +128,7 @@ class CollegeListFragment : Fragment(), CollegeClickListener {
     override fun onCollegeClick(applications: ApplicationModel) {
 //        val action = ApplicationListFragmentDirections.actionApplicationListFragmentToApplicationDetailFragment(applications.uid.toString())
         findNavController().navigate(
-            CollegeListFragmentDirections.actionCollegeListFragmentToChecklistFragment()
+            CollegeListFragmentDirections.actionCollegeListFragmentToChecklistFragment(applications.uid.toString())
         )
     }
 

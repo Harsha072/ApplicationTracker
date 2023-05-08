@@ -70,7 +70,7 @@
     <fragment
         android:id="@+id/collegeListFragment"
         android:name="ie.wit.applicationtracker.ui.college.CollegeListFragment"
-        android:label="fragment_college_list"
+        android:label="college list"
         tools:layout="@layout/fragment_college_list" >
         <action
             android:id="@+id/action_collegeListFragment_to_checklistFragment"
@@ -82,16 +82,20 @@
             app:destination="@id/applicationListFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+
     </fragment>
     <fragment
         android:id="@+id/checklistFragment"
         android:name="ie.wit.applicationtracker.ui.checklist.ChecklistFragment"
-        android:label="fragment_checklist"
+        android:label="checklist"
         tools:layout="@layout/fragment_checklist" >
         <action
             android:id="@+id/action_checklistFragment_to_collegeListFragment"
             app:destination="@id/collegeListFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="applicationid"
+            app:argType="string" />
     </fragment>
 </navigation>
