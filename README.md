@@ -9,5 +9,7 @@ Additionally they can add a checklist for each and every college they have appli
 ## Home Page with College Application details and  toolbar search functionality
 ## Checklist for each college Application
 ## User profile page
-## CRUD Operations for College Application, checklist and user profile
+### CRUD Operations for College Application, checklist and user profile
+### Custom Database and Firebase storage
+
 
