@@ -3,5 +3,11 @@ A simple college application tracker where users can add college details for whi
 They also can keep a track of application status such as Accepted, Rejected, Pending.
 Additionally they can add a checklist for each and every college they have applied
 
-## contains
+# Functionalities included
+## Splash screen
+## Google signin and Firebase Authentication in Login Screen
+## Home Page with College Application details and  toolbar search functionality
+## Checklist for each college Application
+## User profile page
+## CRUD Operations for College Application, checklist and user profile
 
